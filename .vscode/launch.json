@@ -1,9 +1,21 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python Debug",
+            "name": "Debug ValueCell Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/python/valuecell/server/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/python",
+            "env": {
+                "ENV": "local_dev",
+                "PYTHONPATH": "${workspaceFolder}/python"
+            },
+            "python": "${workspaceFolder}/python/.venv/bin/python"
+        },
+        {
+            "name": "current file",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
